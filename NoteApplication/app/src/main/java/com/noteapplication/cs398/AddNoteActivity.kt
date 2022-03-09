@@ -1,25 +1,37 @@
 package com.noteapplication.cs398
 
-import android.app.Activity
+import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
+import android.provider.MediaStore
+import android.view.View
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import androidx.core.widget.addTextChangedListener
-import androidx.lifecycle.ViewModel
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.noteapplication.cs398.databinding.AddNoteBinding
-import com.noteapplication.cs398.databinding.ReadNoteBinding
+import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class AddNoteActivity : AppCompatActivity() {
     private lateinit var binding: AddNoteBinding
     private lateinit var cancel: AppCompatButton
     private lateinit var save: AppCompatButton
     private lateinit var viewModel: NoteViewModel
+    private lateinit var image: ImageButton
+    private lateinit var imageNote: ImageView
 
     private var title: String = ""
     private var content: String = ""
@@ -27,6 +39,9 @@ class AddNoteActivity : AppCompatActivity() {
     private var isEditing: Boolean = false
 
     private var oldId: Int? = null
+
+    private var REQUEST_CODE_STORAGE_PERMISSION = 1
+    private var REQUEST_CODE_SELECT_IMAGE = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +54,10 @@ class AddNoteActivity : AppCompatActivity() {
 
         cancel = binding.cancelButton
         save = binding.saveButton
+        image = binding.addImage
+        imageNote = binding.image
+
+
 
 
         (intent.getSerializableExtra("note") as Note?)?.let {
@@ -85,11 +104,83 @@ class AddNoteActivity : AppCompatActivity() {
             this.finish()
         }
 
-        cancel.setOnClickListener{ this.finish() }
+        cancel.setOnClickListener{
+            this.finish()
+        }
+
+        image.setOnClickListener{
+            @Override
+            if(ContextCompat.checkSelfPermission(applicationContext, Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf("android.permission.READ_EXTERNAL_STORAGE"),
+                    REQUEST_CODE_STORAGE_PERMISSION
+                )
+            }
+            else{
+                selectImage()
+            }
+        }
 
         setContentView(binding.root)
     }
 
+    @Override
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if(requestCode == REQUEST_CODE_STORAGE_PERMISSION && grantResults.isNotEmpty()){
+            if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                selectImage();
+            }
+            else{
+                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show()
+            }
+        }
+        else{
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+        }
+    }
 
+
+
+    private var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+//        if (result.resultCode == REQUEST_CODE_SELECT_IMAGE && result.resultCode == RESULT_OK) {
+            val data: Intent? = result.data
+            if(data != null){
+                val imageUri: Uri? = data.getData()
+                if(imageUri != null){
+                    try{
+                        val inputStream: InputStream? = contentResolver.openInputStream(imageUri)
+                        val bitmap: Bitmap? = BitmapFactory.decodeStream(inputStream)
+                        imageNote.setImageBitmap(bitmap)
+                        imageNote.visibility = View.VISIBLE
+
+                    }catch(exception: Exception ){
+                        Toast.makeText(this, exception.message, Toast.LENGTH_SHORT).show()
+                    }
+                }
+                else{
+                    Toast.makeText(this, "error2", Toast.LENGTH_SHORT).show()
+                }
+            }
+            else{
+                Toast.makeText(this, "error1", Toast.LENGTH_SHORT).show()
+            }
+//        }
+//        else{
+//            Toast.makeText(this, "error3", Toast.LENGTH_SHORT).show()
+//        }
+    }
+
+    fun selectImage() {
+        var intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        try {
+            resultLauncher.launch(intent)
+        } catch (exception: Exception) {
+            Toast.makeText(this, exception.message, Toast.LENGTH_SHORT).show()
+        }
+    }
 
 }
+

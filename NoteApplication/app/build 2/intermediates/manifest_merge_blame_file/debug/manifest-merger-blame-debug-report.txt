@@ -1,0 +1,137 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.noteapplication.cs398"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.REORDER_TASKS" />
+11-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:24:5-72
+11-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:24:22-69
+12
+13    <application
+13-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:5:5-24:19
+14        android:allowBackup="true"
+14-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:6:13-39
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.7.0] /Users/keqinyang/.gradle/caches/transforms-3/fb3270031bd107031c21c5dc13d9e5ef/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:extractNativeLibs="false"
+18        android:icon="@mipmap/ic_launcher"
+18-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:7:13-47
+19        android:label="@string/app_name"
+19-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:8:13-45
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:9:13-58
+21        android:supportsRtl="true"
+21-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:10:13-39
+22        android:testOnly="true"
+23        android:theme="@style/Theme.NoteApplication" >
+23-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:11:13-57
+24        <activity
+24-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:12:9-20:20
+25            android:name="com.noteapplication.cs398.MainActivity"
+25-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:13:17-45
+26            android:exported="true" >
+26-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:14:17-40
+27            <intent-filter>
+27-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:15:13-19:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:16:17-68
+28-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:16:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:18:17-76
+30-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:18:27-74
+31            </intent-filter>
+32        </activity>
+33        <activity android:name="com.noteapplication.cs398.AddNoteActivity" />
+33-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:21:9-52
+33-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:21:19-50
+34        <activity android:name="com.noteapplication.cs398.ReadNoteActivity" />
+34-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:22:9-53
+34-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:22:19-51
+35        <activity
+35-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:27:9-34:20
+36            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+36-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:28:13-99
+37            android:exported="true"
+37-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:29:13-36
+38            android:theme="@android:style/Theme" >
+38-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:30:13-49
+39            <intent-filter>
+39-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:31:13-33:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:16:17-68
+40-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:16:25-66
+41            </intent-filter>
+42        </activity>
+43        <activity
+43-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:35:9-42:20
+44            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+44-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:36:13-95
+45            android:exported="true"
+45-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:37:13-36
+46            android:theme="@android:style/Theme" >
+46-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:38:13-49
+47            <intent-filter>
+47-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:31:13-33:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:16:17-68
+48-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:16:25-66
+49            </intent-filter>
+50        </activity>
+51        <activity
+51-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:43:9-50:20
+52            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+52-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:44:13-103
+53            android:exported="true"
+53-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:45:13-36
+54            android:theme="@android:style/Theme.Dialog" >
+54-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:46:13-56
+55            <intent-filter>
+55-->[androidx.test:core:1.4.0] /Users/keqinyang/.gradle/caches/transforms-3/906f7ca7c30dfc23a3380de6a17b6a3c/transformed/jetified-core-1.4.0/AndroidManifest.xml:31:13-33:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:16:17-68
+56-->/Users/keqinyang/Desktop/Androiddevp/cs398-project/NoteApplication/app/src/main/AndroidManifest.xml:16:25-66
+57            </intent-filter>
+58        </activity>
+59
+60        <provider
+60-->[androidx.emoji2:emoji2:1.0.0] /Users/keqinyang/.gradle/caches/transforms-3/86bbdb4c704f0c6ef69f85fd6941d5d8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+61            android:name="androidx.startup.InitializationProvider"
+61-->[androidx.emoji2:emoji2:1.0.0] /Users/keqinyang/.gradle/caches/transforms-3/86bbdb4c704f0c6ef69f85fd6941d5d8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+62            android:authorities="com.noteapplication.cs398.androidx-startup"
+62-->[androidx.emoji2:emoji2:1.0.0] /Users/keqinyang/.gradle/caches/transforms-3/86bbdb4c704f0c6ef69f85fd6941d5d8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+63            android:exported="false" >
+63-->[androidx.emoji2:emoji2:1.0.0] /Users/keqinyang/.gradle/caches/transforms-3/86bbdb4c704f0c6ef69f85fd6941d5d8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+64            <meta-data
+64-->[androidx.emoji2:emoji2:1.0.0] /Users/keqinyang/.gradle/caches/transforms-3/86bbdb4c704f0c6ef69f85fd6941d5d8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+65                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+65-->[androidx.emoji2:emoji2:1.0.0] /Users/keqinyang/.gradle/caches/transforms-3/86bbdb4c704f0c6ef69f85fd6941d5d8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+66                android:value="androidx.startup" />
+66-->[androidx.emoji2:emoji2:1.0.0] /Users/keqinyang/.gradle/caches/transforms-3/86bbdb4c704f0c6ef69f85fd6941d5d8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+67            <meta-data
+67-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/keqinyang/.gradle/caches/transforms-3/60fb03f7868607ff1baa13fa3ab998ab/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+68                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+68-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/keqinyang/.gradle/caches/transforms-3/60fb03f7868607ff1baa13fa3ab998ab/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+69                android:value="androidx.startup" />
+69-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/keqinyang/.gradle/caches/transforms-3/60fb03f7868607ff1baa13fa3ab998ab/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+70        </provider>
+71
+72        <service
+72-->[androidx.room:room-runtime:2.4.1] /Users/keqinyang/.gradle/caches/transforms-3/db93e230a8f3467e17d28f9c5906f844/transformed/room-runtime-2.4.1/AndroidManifest.xml:25:9-28:40
+73            android:name="androidx.room.MultiInstanceInvalidationService"
+73-->[androidx.room:room-runtime:2.4.1] /Users/keqinyang/.gradle/caches/transforms-3/db93e230a8f3467e17d28f9c5906f844/transformed/room-runtime-2.4.1/AndroidManifest.xml:26:13-74
+74            android:directBootAware="true"
+74-->[androidx.room:room-runtime:2.4.1] /Users/keqinyang/.gradle/caches/transforms-3/db93e230a8f3467e17d28f9c5906f844/transformed/room-runtime-2.4.1/AndroidManifest.xml:27:13-43
+75            android:exported="false" />
+75-->[androidx.room:room-runtime:2.4.1] /Users/keqinyang/.gradle/caches/transforms-3/db93e230a8f3467e17d28f9c5906f844/transformed/room-runtime-2.4.1/AndroidManifest.xml:28:13-37
+76    </application>
+77
+78</manifest>

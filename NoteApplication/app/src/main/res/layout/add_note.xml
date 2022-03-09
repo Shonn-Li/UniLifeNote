@@ -1,150 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"-->
-<!--              android:orientation="vertical"-->
-<!--              android:layout_width="match_parent"-->
-<!--              android:layout_height="match_parent"-->
-<!--              android:background="@color/black"-->
-<!--              tools:context=".AddNoteActivity">-->
 
-<!--    <TextView android:layout_width="match_parent"-->
-<!--              android:layout_height="wrap_content"-->
-<!--              android:id="@+id/addpage"-->
-<!--              android:text=""-->
-<!--              android:textSize="1dp"-->
-<!--              android:textColor="@color/black"-->
-<!--              android:textStyle="bold" android:layout_marginTop="10dp" android:layout_marginStart="10dp"-->
-<!--              android:layout_marginEnd="10dp" android:layout_marginBottom="10dp"/>-->
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                xmlns:android="http://schemas.android.com/apk/res/android">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:orientation="vertical"
-                android:id="@+id/addpage"
->
-    <LinearLayout
-            android:id="@+id/LinearLayoutButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:background="@color/colorPrimary"
-            android:orientation="horizontal">
-        <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cancel_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Cancel"
-                android:textAllCaps="false"
-                android:textColor="@color/red"
-                android:textSize="10pt"
-                android:textAlignment="textStart"
-                android:background="@android:color/transparent"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp">
-        </androidx.appcompat.widget.AppCompatButton>
-        <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/save_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Save"
-                android:textAllCaps="false"
-                android:textColor="@color/blue"
-                android:textSize="10pt"
-                android:textAlignment="textEnd"
-                android:background="@android:color/transparent"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp">
-        </androidx.appcompat.widget.AppCompatButton>
-    </LinearLayout>
+                android:clipToPadding="false"
+                android:layout_marginBottom="100dp"
+                android:paddingBottom="10dp">
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                           xmlns:tools="http://schemas.android.com/tools"
+                                                           xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                           android:layout_width="match_parent"
+                                                           android:layout_height="match_parent"
+                                                           android:background="@color/colorPrimary"
+                                                           android:orientation="vertical"
+                                                           android:id="@+id/addpage">
+            <LinearLayout
+                    android:id="@+id/LinearLayoutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cancel_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/red"
+                        android:textSize="10pt"
+                        android:textAlignment="textStart"
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp">
+                </androidx.appcompat.widget.AppCompatButton>
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/save_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        android:textSize="10pt"
+                        android:textAlignment="textEnd"
+                        android:background="@android:color/transparent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp">
+                </androidx.appcompat.widget.AppCompatButton>
+            </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/LinearLayoutButton"
-            android:id="@+id/title_input"
-            android:hint="Title..."
-            android:background="@drawable/back"
-            android:padding="10dp"
-            android:textSize="25dp"
-            android:layout_marginTop="10dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"/>
-    <LinearLayout
-            android:id="@+id/text_tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/title_input"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/text_rounded_corner"
-                android:id="@+id/sd"
-                android:textSize="16sp"
-                android:hint="   Tools:"/>
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/LinearLayoutButton"
+                    android:id="@+id/title_input"
+                    android:hint="Title..."
+                    android:background="@drawable/back"
+                    android:padding="10dp"
+                    android:textSize="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"/>
 
-        <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+            <LinearLayout
+                    android:id="@+id/text_tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/title_input"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_rounded_corner"
+                        android:id="@+id/sd"
+                        android:textSize="16sp"
+                        android:hint="   Tools:"/>
 
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/bold"
-                android:contentDescription="@string/order"
-                android:background="@drawable/tool_border_frame"/>
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/italic"
-                android:contentDescription="@string/order"
-                android:background="@drawable/tool_border_frame"/>
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/underline"
-                android:background="@drawable/tool_border_frame"
-                android:contentDescription="@string/order"/>
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/highlight"
-                android:contentDescription="@string/order"
-                android:background="@drawable/tool_border_frame"/>
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/image"
-                android:contentDescription="@string/order"
-                android:background="@drawable/tool_border_frame"/>
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
 
-    </LinearLayout>
-    <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/content_input"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/text_tools"
-            android:layout_above="@id/tag"
-            android:background="@drawable/back"
-            android:gravity="start|top"
-            android:hint="  Detail..."
-            android:inputType="textMultiLine"
-            android:singleLine="false"
-            android:textSize="18dp"
-            android:textColor="@color/black"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" android:layout_marginBottom="10dp"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bold"
+                        android:contentDescription="@string/order"
+                        android:background="@drawable/tool_border_frame"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/italic"
+                        android:contentDescription="@string/order"
+                        android:background="@drawable/tool_border_frame"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/underline"
+                        android:background="@drawable/tool_border_frame"
+                        android:contentDescription="@string/order"/>
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/highlight"
+                        android:contentDescription="@string/order"
+                        android:background="@drawable/tool_border_frame"/>
+                <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/image"
+                        android:id="@+id/add_image"
+                        android:contentDescription="@string/order"
+                        android:background="@drawable/tool_border_frame"/>
+            </LinearLayout>
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:adjustViewBounds="true"
+                       android:visibility="visible"
+                       android:id="@+id/image"
+                       android:layout_marginStart="12dp"
+                       android:layout_marginTop="12dp"
+                       android:layout_marginEnd="12dp"
+                       app:layout_constraintTop_toBottomOf="@id/text_tools">
 
+            </ImageView>
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/content_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start|top"
+                    android:hint="Detail..."
+                    app:layout_constraintTop_toBottomOf="@id/image"
+                    android:padding="10dp"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
     <LinearLayout android:id="@+id/tag"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                    android:layout_above="@id/idRmdSwitch">
+                  android:layout_above="@id/idRmdSwitch"
+                  android:orientation="horizontal">
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -168,5 +182,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp" android:layout_marginBottom="10dp"/>
+
 </RelativeLayout>
-        <!--</RelativeLayout>-->
+
+
+
+
