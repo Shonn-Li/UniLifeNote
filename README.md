@@ -1,4 +1,4 @@
-# CS398 Project
+# CS398 Project - Note Application Android
 
 This repository is a note-taking application made as a project for CS398 - Application Development.
 
